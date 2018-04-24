@@ -15,7 +15,7 @@ using Android.Widget;
 namespace ControlExample
 {
     [Activity(Label = "CustomerListViewActivity")]
-    public class CustomerListViewActivity :Activity
+    public class CustomerListViewActivity :AppCompatActivity
     {
         private List<Fruit> fruitList = new List<Fruit>();
 
@@ -23,6 +23,12 @@ namespace ControlExample
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.CustomerListView);
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.Title = "Hello from Toolbar";
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetHomeButtonEnabled(true);
+
             initFruits();// 初始化水果数据
             FruitAdapter adapter = new FruitAdapter(this, Resource.Layout.Fruit_item, fruitList);
             ListView listview = FindViewById<ListView>(Resource.Id.listView_fruit);
@@ -59,5 +65,14 @@ namespace ControlExample
                 fruitList.Add(orange);
             }
         }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            // 返回首页
+            if (item.ItemId == Android.Resource.Id.Home)
+                Finish();
+            return base.OnOptionsItemSelected(item);
+        }
+
     }
 }
