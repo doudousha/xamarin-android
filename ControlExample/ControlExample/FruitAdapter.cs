@@ -19,14 +19,23 @@ namespace ControlExample
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             Fruit fruit = GetItem(position);
-            View view = LayoutInflater.From(this.Context)
-                .Inflate(this.ResourceId, parent, false);
+            View view;
+            MyViewHolder viewHolder;
+            if (convertView == null)
+            {
+                view = LayoutInflater.From(this.Context).Inflate(this.ResourceId, parent, false);
+                viewHolder = new MyViewHolder();
+                viewHolder.fruitImage = view.FindViewById<ImageView>(Resource.Id.fruit_image);
+                viewHolder.fruitName = view.FindViewById<TextView>(Resource.Id.fruit_name);
+                view.Tag = viewHolder; // 缓存到tag 中
+            }
+            else {
+                view = convertView;
+                viewHolder = view.Tag as MyViewHolder;
+            }
 
-            ImageView fruitImage = view.FindViewById<ImageView>(Resource.Id.fruit_image);
-            TextView fruitName = view.FindViewById<TextView>(Resource.Id.fruit_name);
-
-            fruitImage.SetImageResource(fruit.ImageId);
-            fruitName.Text = fruit.Name;
+            viewHolder.fruitImage.SetImageResource(fruit.ImageId);
+            viewHolder.fruitName.Text = fruit.Name;
             return view;
         }
     }

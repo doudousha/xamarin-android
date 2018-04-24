@@ -91,6 +91,7 @@
     <Compile Include="FruitAdapter.cs" />
     <Compile Include="ListViewActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyViewHolder.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
