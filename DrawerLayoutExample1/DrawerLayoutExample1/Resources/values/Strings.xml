@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">DrawerLayoutExample1</string>
+  <string name="Open">Open</string>
+  <string name="Closed">Hamburger</string>
+</resources>
