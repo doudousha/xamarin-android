@@ -1,1 +1,5 @@
 ﻿Install-Package Xamarin.Android.Support.Design -Version 25.4.0.2
+Install-Package Refractored.Controls.CircleImageView -Version 1.0.1
+
+
+NavigationView 制定headerLayout 属性名字的时候，不能包含大小写，否则找不到该layout
