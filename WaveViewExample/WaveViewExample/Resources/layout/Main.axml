@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <!-- wave:above_wave_color-->
+      <!-- wave:blow_wave_color 定义波形的颜色 ，顶部波形平面的下方 -->
+     <!-- wave_height 定义波浪的高度 -->
+     <!-- wave_hz 定义波浪起伏的频率赫兹。 -->
+     <!-- wave_length 定义波浪的长度 -->
+     <!-- wave:progress 为整型值，以0-100,100表示最高位波浪，0表示最低波浪 -->
+  <com.john.waveview.WaveView
+      android:id="@+id/wave_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#ff702e8c"
+      wave:above_wave_color="@android:color/white"
+      wave:blow_wave_color="@android:color/white"
+      wave:progress="80"
+      wave:wave_height="large"
+      wave:wave_hz="normal"
+      wave:wave_length="middle" />
+
+  <SeekBar
+      android:id="@+id/seek_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:progress="80" />
+</RelativeLayout>
+
