@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!--app:itemTextColor: 菜单项文字颜色-->
+  <!--app:itemIconTint: 菜单项图标颜色-->
+  <android.support.design.widget.BottomNavigationView 
+    android:id="@+id/bv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:itemBackground="@color/colorPrimary"
+    app:menu="@menu/botoom_navagation_item"/>
+</RelativeLayout>
