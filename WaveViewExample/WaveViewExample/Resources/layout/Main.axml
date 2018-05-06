@@ -11,7 +11,7 @@
      <!-- wave:progress 为整型值，以0-100,100表示最高位波浪，0表示最低波浪 -->
   <com.john.waveview.WaveView
       android:id="@+id/wave_view"
-      android:layout_width="match_parent"
+      android:layout_width="80dp"
       android:layout_height="match_parent"
       android:background="#ff702e8c"
       wave:above_wave_color="@android:color/white"
