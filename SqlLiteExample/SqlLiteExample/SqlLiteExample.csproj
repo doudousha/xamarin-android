@@ -88,6 +88,7 @@
     <AndroidResource Include="Resources\layout\ls_view_dateTemplate.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <None Include="开始.md" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
